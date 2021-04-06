@@ -1,0 +1,184 @@
+.header {
+    width: 100%;
+    background-color: #fff;
+    padding: 28px 30px 27px 320px;
+    &__wpap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__form {
+        width: 625px;
+        height: 42px;
+        background-color: $bg;
+        position: relative;
+        border-radius: 30px;
+        font-size: 17px;
+        font-weight: 400;
+        &:focus-within  {
+            border: 1px solid $green;
+        }
+        select,
+        input,
+        button {
+            border: none;
+            background: transparent;
+        }
+        input[type="text"] {
+            max-width: 377px;
+            width: 100%;
+            height: auto;
+            padding-left: 20px;
+            outline: none;
+            color: $dark;
+            border-left: 1px solid #d1d4da;
+            margin-left: 20px;
+            position: absolute;
+            top: 12px;
+            right: 81px;
+        }
+        button {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            width: 82px;
+            height: 100%;
+            background: $green;
+            cursor: pointer;
+            border-radius: 0 30px 30px 0;
+            &:before {
+                content: url("../icons/search.svg");
+                font-size: 25px;
+            }
+            &:hover {
+                background-color: $hoverGreen;
+            }
+        }
+    }
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        max-width: 235px;
+        width: 100%;
+        height: auto;
+        &_notification {
+            max-width: 110px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5px;
+            &-circle {
+                width: 42px;
+                height: 42px;
+                background-color: $bg;
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: inset 0 0 0 3px $hoverGreen;
+                }
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    top: 50%;
+                    transform: translateY(50%);
+                }
+            }
+        }
+        &_avatar {
+            width: 55px;
+            height: 55px;
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 10em $bg inset !important;
+        -webkit-text-fill-color: initial !important;
+    }
+    .block {
+        position: absolute;
+        max-width: 166px;
+        width: 100%;
+        height: 42px;
+        top: 0;
+        left: 0;
+    }
+    .option {
+        position: relative;
+        display: block;
+        max-width: 166px;
+        width: 100%;
+        height: 39px;
+        &__head {
+            width: 100%;
+            height: 100%;
+            background-color: #f0f1f3;
+            border-radius: 30px;
+            line-height: 18px;
+            color: rgba(66, 67, 72, 0.8);
+            cursor: pointer;
+            padding-left: 23px;
+            padding-top: 12px;
+            &::after {
+                z-index: 15;
+                position: absolute;
+                right: 18px;
+                bottom: 50%;
+                transform: translateY(50%);
+                content: url("../icons/select.svg");
+                display: block;
+                transition: 0.2s ease-in;
+            }
+            &.open::after {
+                transform: translateY(50%) rotate(180deg);
+            }
+            &.active {
+                border-bottom-left-radius: 0;
+            }
+        }
+        &__list {
+            display: none;
+            position: absolute;
+            max-width: 178px;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #f0f1f3;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 30px 30px;
+            margin-top: 5px;
+            max-height: 205px;
+            text-align: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            z-index: 100;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: 400;
+            color: #424348;
+            &::-webkit-scrollbar {
+                width: 7px;
+                background-color: rgba(50, 169, 97, 0.1);
+                padding: 5px;
+            }
+            li:hover {
+                color: #32a961;
+                background: rgba(50, 169, 97, 0.1);
+            }
+            &.option__list .option__item {
+                position: relative;
+                border-top: 1px solid #d1d4da;
+                padding: 12px 15px;
+                cursor: pointer;
+                list-style-type: none;
+            }
+        }
+    }
+}

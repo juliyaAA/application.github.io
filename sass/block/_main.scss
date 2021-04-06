@@ -1,0 +1,413 @@
+.main {
+    overflow: hidden;
+    height: auto;
+    margin-left: 290px;
+    &__form {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        padding-left: 50px;
+        padding-top: 30px;
+        border-radius: 10px;
+        background: #ffffff;
+        form {
+            display: flex;
+        }
+        label {
+            font-size: 18px;
+            color: $dark;
+            font-weight: 400;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            color: $dark;
+        }
+        input {
+            max-width: 200px;
+            width: 100%;
+            height: 42px;
+            border-radius: 50px;
+            background-color: $bg;
+            border: none;
+            padding-left: 20px;
+            font-size: 16px;
+            &:focus-within  {
+                border: 1px solid $green;
+            }
+        }
+        &_rent {
+            max-width: 1045px;
+            width: 100%;
+            height: auto;
+            .form-address {
+                max-width: 845px;
+                width: 100%;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .form-address_left,
+            .form-address_right {
+                max-width: 370px;
+                width: 100%;
+            }
+            .form-paragraf {
+                margin-top: 30px;
+            }
+            .form-menu {
+                max-width: 55px;
+                width: 100%;
+                height: 42px;
+                border-radius: 0 5px 5px 0;
+                background-color: $green;
+                border: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1;
+            }
+            .form-select {
+                max-width: 189px;
+                width: 100%;
+                position: relative;
+                background-color: #fff;
+                border-radius: 5px;
+                z-index: 5;
+                select {
+                    position: relative;
+                    z-index: 10;
+                    appearance: none;
+                    background: no-repeat right 16px top 11px url('../icons/dow.svg');
+                }
+            }
+        }
+        .date {
+            margin-top: 20px;
+        }
+        &_period {
+            max-width: 461px;
+            width: 100%;
+            margin-top: 30px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &-month {
+                padding: 0 16px;
+                height: 100%;
+                height: 35px;
+                padding-top: 6px;
+                text-align: center;
+                border-radius: 5px;
+                background-color: $dark;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.35;
+                color: #ffffff;
+                border: none;
+                cursor: pointer;
+                &:hover {
+                    background-color: $hoverGreen;
+                }
+                &.active {
+                    background-color: $green;
+                }
+            }
+            &-month + &-month {
+                margin-left: 20px;
+            }
+            .min {
+                width: 89px;
+            }
+            .medium {
+                width: 92px;
+            }
+            .middle {
+                width: 95px;
+            }
+            .max {
+                width: 125px;
+            }
+        }
+        &_budget {
+            margin-top: 30px;
+            margin-bottom: 82px;
+            &-money {
+                margin-top: 24px;
+                display: flex;
+                input {
+                    width: 132px;
+                    height: 42px;
+                }
+            }
+            &-bl {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 177px;
+                width: 100%;
+                label {
+                    margin-top: 0;
+                }
+            }
+            &-bl + &-bl {
+                margin-left: 16px;
+            }
+        }
+        &_client {
+            position: relative;
+            max-width: 523px;
+            min-height: 567px;
+            width: 100%;
+            border-left: 1px solid #aaaaaa;
+            input {
+                max-width: 220px;
+            }
+            &-border {
+                margin-left: 50px;
+            }
+            &-item {
+                margin-top: 30px;
+            }
+            &-top {
+                margin-top: 102px;
+            }
+            span {
+                font-weight: 400;
+                margin-left: 20px;
+            }
+            input[type="submit"] {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                max-width: 266px;
+                width: 100%;
+                height: 42px;
+                background-color: $green;
+                border-radius: 10px 0;
+                padding: 0;
+                font-size: 18px;
+                font-weight: 500;
+                text-align: center;
+                color: #ffffff;
+                &:hover {
+                    transition: 0.3s all;
+                    background-color: $hoverGreen;
+                }
+                &:active {
+                    background-color: $activeGreen;
+                }
+            }
+        }
+        .form-block {
+            max-width: 370px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                display: none;
+            }
+            .calendar {
+                background: url("../icons/calendar.svg") $bg no-repeat right;
+                width: 100%;
+                height: 100%;
+                color: $dark;
+                background-size: contain;
+                height: 42px;
+            }
+        }
+        .form-block + .form-block,
+        .form-block_min {
+            margin-top: 20px;
+        }
+        .form-block_min {
+            max-width: 280px;
+            width: 100%;
+            height: 42px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input {
+                max-width: 110px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .width-input {
+            max-width: 390px;
+        }
+        .box {
+            position: relative;
+            max-width: 200px;
+            width: 100%;
+            height: 42px;
+        }
+        .box-min {
+            position: relative;
+            max-width: 110px;
+            width: 100%;
+            height: 42px;
+            background-color: $bg;
+            border-radius: 30px;
+        }
+        .bg {
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            top: 0;
+            right: 0;
+            background: #32a961;
+            z-index: 10;
+            border-radius: 0 30px 30px 0;
+            &:hover {
+                background-color: $hoverGreen;
+            }
+        }
+        // rent
+        .select {
+            position: relative;
+            display: block;
+            max-width: 200px;
+            width: 100%;
+            height: 42px;
+            &__head {
+                width: 100%;
+                height: 100%;
+                background-color: #f0f1f3;
+                border-radius: 30px;
+                line-height: 18px;
+                color: rgba(66, 67, 72, 0.8);
+                cursor: pointer;
+                padding-left: 47px;
+                padding-top: 11px;
+                &::after {
+                    z-index: 15;
+                    position: absolute;
+                    right: 15px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    content: url("../icons/arrow.svg");
+                    display: block;
+                    transition: 0.2s ease-in;
+                }
+                &.open::after {
+                    transform: translateY(50%) rotate(180deg);
+                }
+                &.active {
+                    border-bottom-left-radius: 0;
+                }
+            }
+            &__list {
+                display: none;
+                position: absolute;
+                max-width: 158px;
+                width: 100%;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: $bg;
+                border-radius: 0 0 30px 30px;
+                margin-top: 5px;
+                max-height: 205px;
+                text-align: center;
+                overflow-x: hidden;
+                overflow-y: auto;
+                z-index: 100;
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                font-weight: 400;
+                color: #424348;
+                scrollbar-color: $bg;
+                scrollbar-width: thin;
+                overscroll-behavior: contain;
+                li:hover {
+                    color: #32a961;
+                    background: rgba(50, 169, 97, 0.1);
+                }
+                &.select__list .select__item {
+                    position: relative;
+                    border-top: 1px solid #d1d4da;
+                    padding: 12px 15px;
+                    cursor: pointer;
+                    list-style-type: none;
+                }
+            }
+        }
+        // count
+        .select-min {
+            position: relative;
+            display: block;
+            max-width: 110px;
+            width: 100%;
+            height: 100%;
+            .select__head_min {
+                width: 100%;
+                height: 100%;
+                background-color: #f0f1f3;
+                border-radius: 30px;
+                line-height: 18px;
+                color: rgba(66, 67, 72, 0.8);
+                cursor: pointer;
+                padding-left: 29px;
+                padding-top: 11px;
+                &::after {
+                    z-index: 15;
+                    position: absolute;
+                    right: 15px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    content: url("../icons/arrow.svg");
+                    display: block;
+                    transition: 0.2s ease-in;
+                }
+                &.open::after {
+                    transform: translateY(50%) rotate(180deg);
+                }
+                &.active {
+                    border-bottom-left-radius: 0;
+                }
+            }
+            .select__list_min {
+                display: none;
+                position: absolute;
+                max-width: 69px;
+                width: 100%;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: $bg;
+                border-radius: 0 0 30px 30px;
+                margin-top: 5px;
+                max-height: 205px;
+                text-align: center;
+                overflow-x: hidden;
+                overflow-y: auto;
+                z-index: 100;
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                font-weight: 400;
+                color: #424348;
+                scrollbar-color: $bg;
+                scrollbar-width: thin;
+                overscroll-behavior: contain;
+                li:hover {
+                    color: #32a961;
+                    background: rgba(50, 169, 97, 0.1);
+                }
+                &.select__list_min .select__item_min {
+                    position: relative;
+                    border-top: 1px solid #d1d4da;
+                    padding: 12px 15px;
+                    cursor: pointer;
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+}

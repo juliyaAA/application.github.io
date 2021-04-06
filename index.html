@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать заявку</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wpap">
+            <div class="header__form">
+                <form action="#">
+                    <div class="block">
+                        <div class="option">
+                            <div class="option__head">Все типы</div>
+                            <ul class="option__list" style="display: none;">
+                                <li class="option__item">Все типы</li>
+                                <li class="option__item">Аренда</li>
+                                <li class="option__item">Продажа</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input class="type-search" type="text" name="search" value placeholder="Поиск" />
+                    <button type="submit"></button>
+                </form>
+            </div>
+            <div class="header__user">
+                <div class="header__user_notification">
+                    <div class="header__user_notification-circle">
+                        <img src="icons/notification.svg" alt="notification">
+                    </div>
+                    <div class="header__user_notification-circle">
+                        <img src="icons/mail.svg" alt="mail">
+                    </div>
+                </div>
+                <div class="header__user_avatar">
+                    <img src="icons/avatar.svg" alt="avatar">
+                </div>
+            </div>
+            <div class="hamburger">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+            </div>
+        </div>
+    </header>
+    <section class="menu">
+        <a href="#" class="menu__logo"></a>
+        <nav>
+            <ul>
+                <li class="menu__list active">
+                    <img src="icons/house.svg" alt="house">
+                    <div class="menu__list_li"><a href="#">Главная</a></div>
+                </li>
+                <li class="menu__list">
+                    <img src="icons/objects.svg" alt="objects">
+                    <div class="menu__list_li"><a href="#">Объекты</a></div>
+                </li>
+                <li class="menu__list">
+                    <img src="icons/requests.svg" alt="requests">
+                    <div class="menu__list_li"><a href="#">Заявки</a></div>
+                </li>
+                <li class="menu__list">
+                    <img src="icons/discounts.svg" alt="discounts">
+                    <div class="menu__list_li"><a href="#">Скидки</a></div>
+                </li>
+                <li class="menu__list">
+                    <img src="icons/company.svg" alt="company">
+                    <div class="menu__list_li"><a href="#">Компании</a></div>
+                </li>
+                <li class="menu__list">
+                    <img src="icons/rent.svg" alt="rent">
+                    <div class="menu__list_li"><a href="#">Объекты аренды</a></div>
+                </li>
+                <li class="menu__list">
+                    <img src="icons/realty.svg" alt="realty">
+                    <div class="menu__list_li"><a href="#">Об-т недвижимости</a></div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="main">
+        <div class="container">
+            <div class="main__form">
+                <form action="#" method="POST">
+                    <div class="main__form_rent">
+                        <div class="form-application form-block">
+                            <label for="application">Тип заявки</label>
+                            <div class="box">
+                                <div class="bg"></div>
+                                <div class="select">
+                                    <div class="select__head">Аренда</div>
+                                    <ul class="select__list" style="display: none;">
+                                        <li class="select__item">Аренда</li>
+                                        <li class="select__item">Продажа</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="form-paragraf">Укажите адрес:</p>
+                        <div class="form-address">
+                            <div class="form-address_left">
+                                <div class="form-block">
+                                    <label for="city">Город</label>
+                                    <input type="text" name="city" id="city" value placeholder="Харьков" required>
+                                </div>
+                                <div class="form-block">
+                                    <label for="district">Район</label>
+                                    <input type="text" name="district" id="district" placeholder="Слободской" required>
+                                </div>
+                                <div class="form-block">
+                                    <label for="microdistrict">Микрорайон</label>
+                                    <input type="text" name="microdistrict" id="microdistrict" placeholder="Борщаговка"
+                                        required>
+                                </div>
+                                <div class="date">
+                                    <div class="form-block">
+                                        <label for="go">Дата заезда</label>
+                                        <input class="calendar datepicker" type="text" name="checkIn" id="go"
+                                            placeholder="12.09.2020" required autocomplete="off">
+                                    </div>
+                                    <div class="form-block">
+                                        <label for="departure">Дата отъезда</label>
+                                        <input class="calendar datepicker" type="text" name="exit" id="departure"
+                                            placeholder="24.09.2020" required autocomplete="off">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-address_right">
+                                <div class="form-block">
+                                    <label for="object">Тип объекта</label>
+                                    <input type="text" name="object" id="object" placeholder="Квартира" required>
+                                </div>
+                                <div class="form-block">
+                                    <label for="realty">Тип&nbsp; <div>недвижимости</div></label>
+                                    <input type="text" name="realty" id="realty" placeholder="Квартира" required>
+                                </div>
+                                <div class="count">
+                                    <div class="form-block_min">
+                                        <label for="room">К-во комнат</label>
+                                        <!-- <input type="number" name="room" id="room" placeholder="2"> -->
+                                        <div class="box-min">
+                                            <div class="bg"></div>
+                                            <div class="select-min">
+                                                <div class="select__head_min">1</div>
+                                                <ul class="select__list_min" style="display: none;">
+                                                    <li class="select__item_min">1</li>
+                                                    <li class="select__item_min">2</li>
+                                                    <li class="select__item_min">3</li>
+                                                    <li class="select__item_min">4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-block_min">
+                                        <label for="knot">К-во санузлов</label>
+                                        <!-- <input type="number" name="knot" id="knot" placeholder="2"> -->
+                                        <div class="box-min">
+                                            <div class="bg"></div>
+                                            <div class="select-min">
+                                                <div class="select__head_min">2</div>
+                                                <ul class="select__list_min" style="display: none;">
+                                                    <li class="select__item_min">1</li>
+                                                    <li class="select__item_min">2</li>
+                                                    <li class="select__item_min">3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-block_min">
+                                        <label for="human">К-во взрослых</label>
+                                        <!-- <input type="number" name="human" id="human" placeholder="2"> -->
+                                        <div class="box-min">
+                                            <div class="bg"></div>
+                                            <div class="select-min">
+                                                <div class="select__head_min">2</div>
+                                                <ul class="select__list_min" style="display: none;">
+                                                    <li class="select__item_min">1</li>
+                                                    <li class="select__item_min">2</li>
+                                                    <li class="select__item_min">3</li>
+                                                    <li class="select__item_min">4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-block_min">
+                                        <label for="child">К-во детей</label>
+                                        <!-- <input type="number" name="child" id="child" placeholder="1"> -->
+                                        <div class="box-min">
+                                            <div class="bg"></div>
+                                            <div class="select-min">
+                                                <div class="select__head_min">1</div>
+                                                <ul class="select__list_min" style="display: none;">
+                                                    <li class="select__item_min">1</li>
+                                                    <li class="select__item_min">2</li>
+                                                    <li class="select__item_min">3</li>
+                                                    <li class="select__item_min">4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="main__form_period">
+                            <div class="main__form_period-month min">1-2 мес</div>
+                            <div class="main__form_period-month medium">3-5 мес</div>
+                            <div class="main__form_period-month middle">6-11 мес</div>
+                            <div class="main__form_period-month max">Более года</div>
+                        </div>
+                        <div class="main__form_budget">
+                            <p>Укажите бюджет:</p>
+                            <div class="main__form_budget-money">
+                                <div class="main__form_budget-bl">
+                                    <label for="min">От</label>
+                                    <input type="number" name="min" id="min" placeholder="$1500">
+                                </div>
+                                <div class="main__form_budget-bl">
+                                    <label for="max">До</label>
+                                    <input type="number" name="max" id="max" placeholder="$3500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__form_client">
+                        <div class="main__form_client-border">
+                            <p class="main__form_client-top">Откуда заявка: <span>Мой клиент</span></p>
+                            <div class="main__form_client-item">
+                                <div class="form-block width-input">
+                                    <label for="fio">ФИО</label>
+                                    <input type="text" name="fio" id="fio" placeholder="Хромов Иван Иванов" required>
+                                </div>
+                                <div class="form-block width-input">
+                                    <label for="phone">Телефон</label>
+                                    <input type="text" name="phone" id="phone" placeholder="+38 (___) __ - __ - ____"
+                                        required>
+                                </div>
+                                <div class="form-block width-input">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" name="email" id="email" placeholder="people@gmail.com" required>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" name="submit" value="Отправить предложение">
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="title ">
+        <div class="container">
+            <div class="title__text">Список объектов</div>
+        </div>
+    </section>
+    <section class="table">
+        <div class="table__scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID</th>
+                        <th>Название объекта</th>
+                        <th>Тип</th>
+                        <th>К-во комнат</th>
+                        <th>К-во взрослых
+                            <div>и детей</div>
+                        </th>
+                        <th>Сутки от</th>
+                        <th>1 мес</th>
+                        <th>3 мес</th>
+                        <th>6 мес</th>
+                        <th>Год</th>
+                        <th>Продажа</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox" />
+                            <label for="checkbox"></label>
+                        </td>
+                        <td>1</td>
+                        <td>Гранд Отель</td>
+                        <td>Отель</td>
+                        <td>3</td>
+                        <td>2 взрослых 2 детей</td>
+                        <td>$57</td>
+                        <td>$428</td>
+                        <td>$1641</td>
+                        <td>$7200</td>
+                        <td>$14 000</td>
+                        <td>$231 000</td>
+                        <td>
+                            <div class="toggle-bg">
+                                <input type="radio" name="toggle" value="off">
+                                <input type="radio" name="toggle" value="on">
+                                <span class="switch"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox2" />
+                            <label for="checkbox2"></label>
+                        </td>
+                        <td>2</td>
+                        <td>Гранд Отель</td>
+                        <td>Отель</td>
+                        <td>1</td>
+                        <td>1 взрослый</td>
+                        <td>$9</td>
+                        <td>$169</td>
+                        <td>$540</td>
+                        <td>$3245</td>
+                        <td>$9000</td>
+                        <td>$110 450</td>
+                        <td>
+                            <div class="toggle-bg">
+                                <input type="radio" name="toggle1" value="off">
+                                <input type="radio" name="toggle1" value="on">
+                                <span class="switch"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox3" />
+                            <label for="checkbox3"></label>
+                        </td>
+                        <td>3</td>
+                        <td>Гранд Отель</td>
+                        <td>Отель</td>
+                        <td>6</td>
+                        <td>4 взрослых 6 детей</td>
+                        <td>$149</td>
+                        <td>$1290</td>
+                        <td>$3100</td>
+                        <td>$18 880</td>
+                        <td>$40 500</td>
+                        <td>$689 950</td>
+                        <td>
+                            <div class="toggle-bg">
+                                <input type="radio" name="toggle2" value="off" id="off">
+                                <input type="radio" name="toggle2" value="on" id="on">
+                                <span class="switch"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

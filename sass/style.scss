@@ -1,0 +1,32 @@
+@import "base/variables";
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: $bg;
+}
+.container {
+    max-width: 1630px;
+    width: 100%;
+    padding: 0 30px;
+    display: block;
+    margin: 0 auto;
+}
+.hamburger {
+    display: none;
+}
+
+@import "block/header";
+@import "block/menu";
+@import "block/main";
+@import "block/title";
+@import "block/table";
+@import "base/media";

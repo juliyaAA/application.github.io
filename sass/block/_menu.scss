@@ -1,0 +1,44 @@
+.menu {
+    width: 289px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: $dark;
+    position: fixed;
+    border-top-right-radius: 30px;
+    border: none;
+    padding-left: 28px;
+    &__logo {
+        width: 201px;
+        height: 52px;
+        margin-top: 10px;
+        background-image: url('../icons/logo.svg');
+        background-repeat: no-repeat;
+    }
+    nav {
+        margin-top: 48px;
+    }
+    &__list + &__list {
+        margin-top: 23px;
+    }
+    &__list {
+        display: flex;
+        width: 262px;
+        height: 79px;
+        padding: 28px 0 28px 13px;
+        &.active {
+            background-image: url('../icons/bg.svg');
+            a {
+               color: $dark; 
+            }
+        }
+        &_li a {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 12px;
+            margin-top: 2px;
+            color: $text;
+        }
+    }
+}
