@@ -61,24 +61,16 @@ jQuery(($) => {
         $(this).addClass('active');
     });
     // checkbox
-
-    // $('.checkbox label').on('click', function () {
-    //     $(this).parents('tr').toggleClass('active');
-    //     $(this).parents('td:first-child').toggleClass('activ');
-    //     $(this).parents('.switch').toggleClass('activ');
-    //     $('[type="checkbox"]').on('change', function () {
-    //         let isChecked = $(this).is(":checked");
-    //         let $currentTr = $(this).closest('tr');
-    //         $currentTr.find('[type="radio"]').prop('checked', false);
-    //         $currentTr.find('[value="on"]').prop('checked', isChecked);
-    //         $(this).closest('tr').find(".toggle-bg");
-    //         if (isChecked) {
-    //             $(this).closest('tr').find(".toggle-bg").addClass('bg');
-    //         } else {
-    //             $(this).closest('tr').find(".toggle-bg").removeClass('bg');
-    //         }
-    //     });
-    // });
+    $('[type="checkbox"]').on('click', function (evt) {
+        let checkbox = $(evt.target),
+            index = checkbox.closest('div.checkbox').index(),
+            row = $('tbody tr')[index];
+      $(row).toggleClass('active');
+      $(row).find('.toggle-bg').toggleClass('bg');
+      $(row).find('[type="radio"][value="on"]').prop('checked', this.checked);
+      $(row).find('[type="radio"][value="off"]').prop('checked', !this.checked);
+    });
+ 
     // celect
     $('.option').on('click', '.option__head', function () {
         if ($(this).hasClass('open active')) {
