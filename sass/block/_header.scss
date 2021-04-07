@@ -34,7 +34,8 @@
             border-left: 1px solid #d1d4da;
             margin-left: 20px;
             position: absolute;
-            top: 12px;
+            top: 50%;
+            transform: translateY(-50%);
             right: 81px;
         }
         button {

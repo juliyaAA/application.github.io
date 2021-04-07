@@ -4,7 +4,6 @@ jQuery(($) => {
         $('.menu__list').removeClass('active');
         $(this).addClass('active');
     });
-
     // rent
     $('.select').on('click', '.select__head', function () {
         if ($(this).hasClass('open active')) {
@@ -29,7 +28,6 @@ jQuery(($) => {
             $('.select__list').fadeOut();
         }
     });
-
     // count
     $('.select-min').on('click', '.select__head_min', function () {
         if ($(this).hasClass('open active-min')) {
@@ -54,7 +52,6 @@ jQuery(($) => {
             $('.select__list_min').fadeOut();
         }
     });
-
     // Maska
     $("#phone").mask("+38 (999) 999-99-99");
 
@@ -63,26 +60,26 @@ jQuery(($) => {
         $('.main__form_period-month').removeClass('active');
         $(this).addClass('active');
     });
-
     // checkbox
 
-    $('.checkbox label').on('click', function () {
-        $(this).parents('tr').toggleClass('active');
-        $(this).parents('td:first-child').toggleClass('activ');
-        $(this).parents('.switch').toggleClass('activ');
-        $('[type="checkbox"]').on('change', function () {
-            let isChecked = $(this).is(":checked");
-            let $currentTr = $(this).closest('tr');
-            $currentTr.find('[type="radio"]').prop('checked', false);
-            $currentTr.find('[value="on"]').prop('checked', isChecked);
-            $(this).closest('tr').find(".toggle-bg");
-            if (isChecked) {
-                $(this).closest('tr').find(".toggle-bg").addClass('bg');
-            } else {
-                $(this).closest('tr').find(".toggle-bg").removeClass('bg');
-            }
-        });
-    });
+    // $('.checkbox label').on('click', function () {
+    //     $(this).parents('tr').toggleClass('active');
+    //     $(this).parents('td:first-child').toggleClass('activ');
+    //     $(this).parents('.switch').toggleClass('activ');
+    //     $('[type="checkbox"]').on('change', function () {
+    //         let isChecked = $(this).is(":checked");
+    //         let $currentTr = $(this).closest('tr');
+    //         $currentTr.find('[type="radio"]').prop('checked', false);
+    //         $currentTr.find('[value="on"]').prop('checked', isChecked);
+    //         $(this).closest('tr').find(".toggle-bg");
+    //         if (isChecked) {
+    //             $(this).closest('tr').find(".toggle-bg").addClass('bg');
+    //         } else {
+    //             $(this).closest('tr').find(".toggle-bg").removeClass('bg');
+    //         }
+    //     });
+    // });
+    // celect
     $('.option').on('click', '.option__head', function () {
         if ($(this).hasClass('open active')) {
             $(this).removeClass('open active');
@@ -115,6 +112,9 @@ jQuery(($) => {
     // hamburger
     $('.hamburger').on('click', function () {
         $('.header__user').slideToggle();
+        if ($(window).width() < 901) {
+            $('.header__form').slideToggle();
+        }
         $(this).toggleClass('active');
         $('.header').toggleClass('active');
     });

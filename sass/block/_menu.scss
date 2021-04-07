@@ -18,16 +18,16 @@
     nav {
         margin-top: 48px;
     }
-    &__list + &__list {
-        margin-top: 23px;
-    }
+    // &__list + &__list {
+    //     margin-top: 23px;
+    // }
     &__list {
         display: flex;
         width: 262px;
-        height: 79px;
+        height: 75px;
         padding: 28px 0 28px 13px;
         &.active {
-            background-image: url('../icons/bg.svg');
+            background: url('../icons/bg.svg') no-repeat;
             a {
                color: $dark; 
             }
