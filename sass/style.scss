@@ -23,6 +23,10 @@ body {
 .hamburger {
     display: none;
 }
+.hasDatepicker {
+    position: relative;
+    z-index: 50;
+}
 
 @import "block/header";
 @import "block/menu";

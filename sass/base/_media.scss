@@ -13,7 +13,7 @@
         padding-top: 30px;
         padding-left: 0;
         &_rent {
-            margin-left: 50px;
+            margin-left: 66px;
         }
         &_budget {
             margin-bottom: 50px;
@@ -22,16 +22,47 @@
             display: block;
         }
         &_client {
-            min-height: 352px;
+            min-height: 290px;
             max-width: 100%;
             border-top: 1px solid #aaa;
             border-left: none;
             &-top {
                 margin-top: 40px;
+                text-align: center;
+                span {
+                    margin-left: 78px;
+                }
             }
+            &-item {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .form-block + .form-block {
+                    margin-top: 0;
+                }
+            }
+            &-border {
+                margin: 0 66px;
+            }
+            input {
+                max-width: 210px;
+            }
+        }
+        .width-input {
+            max-width: 302px;
         }
         .form-address {
             padding-right: 0;
+        }
+    }
+}
+@media (max-width: 1410px) {
+    .main__form_client-item {
+        max-width: 765px;
+        .width-input:nth-child(2) {
+            order: 1;
+            margin-top: 20px;
         }
     }
 }
@@ -52,60 +83,45 @@
         max-width: 780px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1210px) {
     .main__form {
-        form {
-            padding: 0 15px;
+        &_rent,
+        &_client-border {
+            margin-left: 30px;
         }
-        &_rent {
-            display: block;
-            margin: 0;
-        }
-        .form-address {
-            display: block;
-        }
-        .form-block {
-            margin: 0 auto;
-        }
-        .form-paragraf {
-            text-align: center;
-            margin-top: 30px;
-        }
-        &_period,
-        .form-address_left,
-        .form-address_right {
+        &_period {
             margin-left: auto;
             margin-right: auto;
         }
-        .form-address_right {
-            margin-top: 20px;
+        label {
+            font-size: 16px;
         }
-        &_budget {
-            text-align: center;
-            &-money {
-                justify-content: center;
-            }
-        }
-        &_client {
-            &-border {
-                margin-left: 0;
-            }
-            &-top {
-                text-align: center;
-            }
-            input[type="submit"] {
-                right: -15px;
-            }
-        }
+    }
+}
+@media (max-width: 1165px) {
+    .container {
+        padding: 0 15px;
+    }
+    .main__form_rent {
+        padding-right: 8px;
+    }
+}
+@media (max-width: 1135px) {
+    .main__form_rent {
+        margin-left: 10px;
     }
 }
 @media (max-width: 1100px) {
     .header {
+        padding: 28px 30px 27px 90px;
         &.active {
             height: 100%;
         }
         &__form {
             margin-right: 40px;
+        }
+        &__wrap {
+            display: block;
         }
         &__user {
             display: none;
@@ -153,58 +169,6 @@
             }
         }
     }
-}
-@media (max-width: 900px) {
-    .header {
-        padding: 70px 30px 27px 320px;
-        &__wpap {
-            justify-content: center;
-        }
-        &__form {
-            display: none;
-            margin-top: 25px;
-            margin-right: 0;
-            width: 423px;
-            .block {
-                display: none;
-            }
-        }
-        input[type=text] {
-            max-width: 310px;
-            padding-left: 0; 
-            margin-left: 0;
-            border-left: none;
-        }
-        button {
-            width: 65px;
-        }
-    }
-}
-@media (max-width: 840px) {
-    .main__form_period {
-        justify-content: start;
-        &-month {
-            margin-top: 10px;
-        }
-        &-month + &-month {
-            margin-left: 10px;
-        }
-    }
-}
-@media (max-width: 770px) {
-    .title,
-    .main {
-        margin-left: 60px;
-    }
-    .table {
-        margin-left: 80px;
-    }
-    .header {
-        padding: 40px 30px 20px 83px;
-        .hamburger {
-            top: 8px;
-        }
-    }
     .menu {
         width: 60px;
         padding-left: 0;
@@ -232,8 +196,474 @@
             margin: 0 auto;
         }
     }
+    .title,
+    .main,
+    .table {
+        margin-left: 60px;
+    }
+    .main__form_rent,
+    .main__form_client-border {
+        margin-left: 50px;
+    }
+    .table table {
+        thead {
+            font-size: 12px;
+        }
+        td {
+            font-size: 13.5px;
+        }
+    }
 }
-@media (max-width: 579px) {
+@media (max-width: 1000px) {
+    .container {
+        padding: 0 19px;
+    }
+    .table {
+        &__scroll {
+            width: 915px;
+            table {
+                thead {
+                    th:first-child {
+                        width: 23px;
+                    }
+                    th:nth-child(2) {
+                        width: 46px;
+                    }
+                    th:nth-child(3) {
+                        width: 104px;
+                    }
+                    th:nth-child(4) {
+                        width: 86px;
+                    }
+                    th:nth-child(5) {
+                        width: 56px;
+                    }
+                    th:nth-child(6) {
+                        width: 115px;
+                    }
+                    th:nth-child(n + 7) {
+                        width: 68px;
+                    }
+                }
+                .checkbox input:checked:after {
+                    top: -18px;
+                }
+                .toggle-bg {
+                    height: 25px;
+                    width: 53px;
+                    margin-left: 14px;
+                    padding: 0;
+                    input {
+                        height: 15px;
+                        width: 53px;
+                    }
+                }
+                .switch {
+                    background: url(../icons/radio_orange_min.svg) no-repeat;
+                    height: 22px;
+                    width: 22px;
+                }
+            }
+        }
+    }
+    .main__form .form-application {
+        max-width: 335px;
+        .box {
+            max-width: 163px;
+            height: 42px;
+        }
+        .select__list {
+            max-width: 121px;
+            font-size: 14px;
+        }
+    }
+    .main__form .select .rent {
+        padding-left: 35px;
+        width: 124px;
+    }
+}
+@media (max-width: 940px) {
+    .main__form_rent,
+    .main__form_client-border {
+        margin-left: 27px;
+    }
+    .main__form_client-top span {
+        margin-left: 59px;
+    }
+}
+@media (max-width: 900px) {
+    .header {
+        padding: 31px 30px 31px 90px;
+        &__form {
+            width: 397px;
+            font-size: 14px;
+            height: 35px;
+            .block {
+                max-width: 129px;
+                height: 35px;
+            }
+            .option {
+                height: 33px;
+                &__head {
+                    padding-left: 16px;
+                    padding-top: 9px;
+                }
+                &__list {
+                    font-size: 14px;
+                }
+            }
+        }
+        input[type="text"] {
+            max-width: 187px;
+        }
+        button {
+            width: 65px;
+        }
+    }
+    .main__form {
+        .form-block {
+            max-width: 315px;
+            input {
+                max-width: 181px;
+                font-size: 14px;
+            }
+            .calendar {
+                height: 35px;
+            }
+            &_min {
+                max-width: 230px;
+            }
+        }
+        label {
+            font-size: 14px;
+        }
+        p {
+            font-size: 16px;
+        }
+
+        .box {
+            max-width: 181px;
+            height: 35px;
+        }
+        .box-min {
+            height: 35px;
+            max-width: 93px;
+        }
+        .select__list {
+            max-width: 145px;
+            font-size: 14px;
+        }
+        .select-min .select__list_min {
+            max-width: 58px;
+            font-size: 14px;
+        }
+        .bg {
+            width: 36px;
+            height: 35px;
+        }
+        .select {
+            height: 35px;
+        }
+        .select__head {
+            padding-top: 9px;
+            font-size: 14px;
+            &::after {
+                right: 12px;
+            }
+        }
+        &_budget {
+            &-money input {
+                width: 116px;
+                height: 35px;
+            }
+            &-bl {
+                max-width: 155px;
+            }
+        }
+        &_period {
+            max-width: 391px;
+            &-month {
+                padding: 0;
+                font-size: 14px;
+                padding-top: 6px;
+            }
+            .min {
+                width: 74px;
+                height: 29px;
+            }
+            .medium,
+            .middle {
+                width: 76px;
+                height: 29px;
+            }
+            .max {
+                width: 104px;
+                height: 29px;
+            }
+        }
+        .form-application {
+            max-width: 274px;
+            .box {
+                max-width: 137px;
+                height: 35px;
+            }
+            .select__list {
+                max-width: 101px;
+                font-size: 14px;
+            }
+        }
+        .select .rent {
+            padding-left: 21px;
+        }
+        .select-min .select__head_min {
+            font-size: 14px;
+            padding-left: 28px;
+            padding-top: 9px;
+            &::after {
+                right: 13px;
+            }
+        }
+        &_client {
+            min-height: 225px;
+            &-item .width-input {
+                max-width: 289px;
+                input {
+                    max-width: 201px;
+                    height: 35px;
+                }
+            }
+            input[type="submit"] {
+                max-width: 216px;
+                height: 35px;
+                font-size: 15px;
+            }
+        }
+    }
+    .title__text {
+        font-size: 23px;
+    }
+}
+@media (max-width: 840px) {
+    .main__form_period {
+        justify-content: start;
+        &-month {
+            margin-top: 10px;
+        }
+        &-month + &-month {
+            margin-left: 10px;
+        }
+    }
+}
+@media (max-width: 770px) {
+    .main__form {
+        .form-block {
+            max-width: 299px;
+        }
+        .form-block_min {
+            max-width: 214px;
+        }
+        .form-application {
+            max-width: 256px;
+        }
+        &_client-item .width-input {
+            max-width: 280px;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .header__form {
+        height: 42px;
+        .block {
+            height: 42px;
+        }
+        .option {
+            height: 40px;
+            &__head {
+                padding-top: 12px;
+            }
+        }
+    }
+    .main__form {
+        .form-address {
+            display: block;
+        }
+        .form-application .box {
+            max-width: 180px;
+            height: 42px;
+        }
+        .select .rent {
+            padding-left: 37px;
+            width: 145px;
+        }
+        .form-application .select__list {
+            max-width: 138px;
+        }
+        .select .select__list {
+            font-size: 16px;
+        }
+        &_rent {
+            padding-right: 0;
+            .form-address_right {
+                margin-top: 20px;
+            }
+            .form-address_left,
+            .form-address_right {
+                max-width: 650px;
+                width: 100%;
+            }
+        }
+        label {
+            font-size: 18px;
+        }
+        p {
+            font-size: 20px;
+        }
+        &_rent,
+        &_client-border {
+            margin-left: 55px;
+        }
+        .form-block {
+            max-width: 350px;
+            .calendar {
+                height: 42px;
+            }
+            input {
+                max-width: 180px;
+                font-size: 16px;
+            }
+        }
+        .form-block_min {
+            max-width: 280px;
+        }
+        .count {
+            margin-top: 20px;
+        }
+        .box {
+            max-width: 180px;
+            height: 42px;
+        }
+        .box-min {
+            height: 42px;
+            max-width: 110px;
+        }
+        .form-block_min + .form-block_min {
+            margin-top: 20px;
+        }
+        .bg {
+            width: 42px;
+            height: 42px;
+        }
+        .select {
+            height: 42px;
+            &__list {
+                max-width: 138px;
+            }
+            &__head {
+                padding-top: 12px;
+                font-size: 16px;
+            }
+        }
+        .select-min .select__head_min {
+            font-size: 16px;
+            padding-left: 32px;
+            padding-top: 12px;
+        }
+        &_client {
+            min-height: 352px;
+            &-top {
+                text-align: left;
+            }
+            &-item {
+                .width-input input {
+                    max-width: 220px;
+                    height: 42px;
+                }
+                .width-input:nth-child(2) {
+                    order: 0;
+                    margin-top: 0;
+                }
+                .width-input + .width-input {
+                    margin-top: 20px;
+                }
+            }
+            input[type="submit"] {
+                max-width: 266px;
+                height: 42px;
+                font-size: 18px;
+            }
+        }
+        &_period {
+            max-width: 462px;
+            margin: 30px 0 0;
+            .min {
+                width: 89px;
+                height: 35px;
+            }
+            .medium {
+                width: 92px;
+                height: 35px;
+            }
+            .middle {
+                width: 95px;
+                height: 35px;
+            }
+            .max {
+                width: 125px;
+                height: 35px;
+            }
+            &-month {
+                font-size: 16px;
+            }
+        }
+        &_budget {
+            &-border {
+                max-width: 161px;
+            }
+            &-money input {
+                width: 118px;
+                height: 42px;
+            }
+        }
+        .select-min .select__list_min {
+            max-width: 68px;
+            font-size: 16px;
+        }
+    }
+    .table__scroll table .toggle-bg {
+        margin-left: 11px;
+    }
+}
+@media (max-width: 600px) {
+    .header {
+        padding: 30px 30px 30px 90px;
+        &__form {
+            display: none;
+            margin: 0 auto;
+            margin-top: 30px;
+            .block {
+                display: none;
+            }
+        }
+        input[type="text"] {
+            max-width: 295px;
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+    .hamburger {
+        top: 10px;
+        right: 23px;
+    }
+    .main__form_rent,
+    .main__form_client-border {
+        margin-left: 0;
+        padding: 0 20px;
+    }
+    .main__form_client-top span {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 556px) {
     .main__form_period-month:last-child {
         margin-left: 0;
     }
@@ -244,18 +674,33 @@
     }
     .header {
         &__form {
-        max-width: 360px;
-        width: 100%;
+            max-width: 360px;
+            width: 100%;
         }
-        input[type=text] {
+        input[type="text"] {
             max-width: 260px;
             right: 0;
             left: 20px;
+            margin-left: 0;
         }
+    }
+}
+@media (max-width: 510px) {
+    .main__form_client-item .width-input {
+        max-width: 330px;
+        input {
+            max-width: 220px;
+        }
+    }
+    .main__form_client-border {
+        margin: 0;
     }
 }
 @media (max-width: 480px) {
     .main__form {
+        p {
+            text-align: center;
+        }
         input {
             max-width: 180px;
         }
@@ -268,12 +713,12 @@
         .select__list {
             max-width: 138px;
         }
-        .width-input {
-            max-width: 340px;
-            input {
-                max-width: 220px;
-            }
-        }
+    }
+    .main__form_client-border {
+        margin-right: 0;
+    }
+    .title {
+        margin-top: 80px;
     }
 }
 @media (max-width: 450px) {
@@ -282,6 +727,7 @@
         .hamburger {
             width: 20px;
             right: 17px;
+            top: 6px;
             &.active .third {
                 transform: translateY(-4px) rotate(-45deg);
             }
@@ -322,7 +768,6 @@
             margin: 0;
             align-items: initial;
             height: 60px;
-            // margin-top: 20px;
             .box,
             input {
                 max-width: 100px;
@@ -335,7 +780,7 @@
                 height: 32px;
                 background: url("../icons/calendar_min.svg") #f0f1f3 no-repeat right;
                 text-align: left;
-                padding-left: 7px;
+                padding-left: 6px;
             }
             &_min {
                 display: block;
@@ -384,6 +829,7 @@
             input {
                 width: 76px;
                 padding-left: 10px;
+                height: 32px;
             }
         }
         &_period {
@@ -445,7 +891,7 @@
         }
         &_rent,
         &_right {
-            max-width: 220px;
+            max-width: 260px;
         }
         .width-input {
             max-width: 340px;
@@ -453,19 +899,31 @@
                 max-width: 180px;
             }
         }
+        .form-application .select__list {
+            max-width: 74px;
+            font-size: 12px;
+        }
         .bg,
         .select {
             height: 32px;
+            .rent {
+                padding-left: 15px;
+                width: 85px;
+            }
         }
         .select__list {
             max-width: 74px;
             font-size: 11px;
-            border-radius: 0 0 20px 20px;
+            border-radius: 0 0 10px 10px;
+        }
+        .select .select__list {
+            font-size: 12px;
         }
         .select__head {
-            padding-left: 13px;
-            padding-top: 7px;
+            padding: 7px 14px 0 12px;
             text-align: left;
+            font-size: 12px;
+            width: 83px;
             &::after {
                 content: url("../icons/arrow_min.svg");
                 right: 7px;
@@ -475,12 +933,13 @@
         .select-min {
             .select__list_min {
                 max-width: 74px;
-                font-size: 11px;
-                border-radius: 0 0 20px 20px;
+                font-size: 12px;
+                border-radius: 0 0 10px 10px;
             }
             .select__head_min {
                 padding-left: 34px;
                 padding-top: 7px;
+                font-size: 12px;
                 &::after {
                     content: url("../icons/arrow_min.svg");
                     right: 7px;
@@ -493,17 +952,21 @@
         }
     }
     .title__text {
-        font-size: 22px;
+        font-size: 20px;
     }
     .main__form .select__list.select__list .select__item {
         padding: 12px 10px;
     }
 }
 @media (max-width: 375px) {
+    .header button {
+        width: 46px;
+    }
     .main__form {
         background-color: $bg;
         margin-top: 0;
-        form {
+        &_rent,
+        &_client-border {
             padding: 0;
         }
         input {
@@ -524,5 +987,12 @@
     }
     .main__form .select__list {
         background-color: #fff;
+    }
+    .main__form_client-top span {
+        margin-left: 14px;
+    }
+    .main__form_rent .form-address_left,
+    .main__form_rent .form-address_right {
+        max-width: 220px;
     }
 }
