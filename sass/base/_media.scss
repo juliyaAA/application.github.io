@@ -170,15 +170,18 @@
         }
     }
     .menu {
+        padding-top: 22px;
         width: 60px;
         padding-left: 0;
         border-top-right-radius: 10px;
         nav {
             margin-left: 6px;
+            margin-top: 30px;
         }
         &__list {
             width: 55px;
-            height: 82px;
+            height: 69px;
+            padding: 24px 0 24px 13px;
             &.active {
                 background: url("../icons/border_min.svg") no-repeat;
             }
@@ -201,9 +204,18 @@
     .table {
         margin-left: 60px;
     }
-    .main__form_rent,
+    .form-application,
+    .main__form .form-paragraf,
+    .main__form .form-address,
+    .main__form_budget,
     .main__form_client-border {
         margin-left: 50px;
+    }
+    .main__form_rent {
+        margin-left: 0;
+    }
+    .main__form_client {
+        min-height: 231px;
     }
     .table table {
         thead {
@@ -220,7 +232,7 @@
     }
     .table {
         &__scroll {
-            width: 915px;
+            width: 890px;
             table {
                 thead {
                     th:first-child {
@@ -245,6 +257,36 @@
                         width: 68px;
                     }
                 }
+                // tbody {
+                //     td:first-child {
+                //         width: 23px;
+                //     }
+                //     td:nth-child(2) {
+                //         width: 46px;
+                //     }
+                //     td:nth-child(3) {
+                //         width: 104px;
+                //     }
+                //     td:nth-child(4) {
+                //         width: 86px;
+                //     }
+                //     td:nth-child(5) {
+                //         width: 56px;
+                //     }
+                //     td:nth-child(6) {
+                //         width: 115px;
+                //     }
+                //     td:nth-child(n + 7) {
+                //         width: 68px;
+                //     }
+                //     &::-webkit-scrollbar {
+                //         width: 4px;
+                //     }
+                //     &::-webkit-scrollbar-thumb {
+                //         background-color: $green;
+                //         border-radius: 5px;
+                //     }
+                // }
                 .checkbox input:checked:after {
                     top: -18px;
                 }
@@ -283,9 +325,12 @@
     }
 }
 @media (max-width: 940px) {
-    .main__form_rent,
+    .form-application,
+    .main__form .form-paragraf,
+    .main__form .form-address,
+    .main__form_budget,
     .main__form_client-border {
-        margin-left: 27px;
+        margin-left: 25px;
     }
     .main__form_client-top span {
         margin-left: 59px;
@@ -629,11 +674,20 @@
             font-size: 16px;
         }
     }
+    .form-application,
+    .main__form .form-paragraf,
+    .main__form .form-address,
+    .main__form_budget {
+        margin-left: 0;
+    }
     .table__scroll table .toggle-bg {
         margin-left: 11px;
     }
 }
 @media (max-width: 600px) {
+    .menu {
+        padding-top: 4px;
+    }
     .header {
         padding: 30px 30px 30px 90px;
         &__form {
@@ -722,6 +776,9 @@
     }
 }
 @media (max-width: 450px) {
+    .menu {
+        padding-top: 1px;
+    }
     .header {
         padding: 20px 15px 20px 80px;
         .hamburger {
@@ -767,7 +824,7 @@
             flex-direction: column;
             margin: 0;
             align-items: initial;
-            height: 60px;
+            height: 54px;
             .box,
             input {
                 max-width: 100px;
@@ -785,7 +842,7 @@
             &_min {
                 display: block;
                 width: 100px;
-                height: 60px;
+                height: 54px;
             }
         }
         .count {
@@ -794,9 +851,9 @@
             justify-content: space-between;
             width: 220px;
             height: auto;
+            margin-top: 0;
         }
         .date {
-            margin-top: 20px;
             display: flex;
             width: 220px;
             justify-content: space-between;
@@ -849,6 +906,7 @@
             margin-bottom: 30px;
         }
         &_client {
+            padding-bottom: 20px;
             span {
                 font-size: 14px;
             }
