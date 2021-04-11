@@ -217,24 +217,15 @@
     .main__form_client {
         min-height: 231px;
     }
-    .table table {
-        thead {
-            font-size: 12px;
-        }
-        td {
-            font-size: 13.5px;
-        }
-    }
-}
-@media (max-width: 1000px) {
-    .container {
-        padding: 0 19px;
-    }
     .table {
         &__scroll {
-            width: 890px;
+            width: 970px;
             table {
+                td {
+                    font-size: 13.5px;
+                }
                 thead {
+                    font-size: 12px;
                     th:first-child {
                         width: 23px;
                     }
@@ -257,36 +248,6 @@
                         width: 68px;
                     }
                 }
-                // tbody {
-                //     td:first-child {
-                //         width: 23px;
-                //     }
-                //     td:nth-child(2) {
-                //         width: 46px;
-                //     }
-                //     td:nth-child(3) {
-                //         width: 104px;
-                //     }
-                //     td:nth-child(4) {
-                //         width: 86px;
-                //     }
-                //     td:nth-child(5) {
-                //         width: 56px;
-                //     }
-                //     td:nth-child(6) {
-                //         width: 115px;
-                //     }
-                //     td:nth-child(n + 7) {
-                //         width: 68px;
-                //     }
-                //     &::-webkit-scrollbar {
-                //         width: 4px;
-                //     }
-                //     &::-webkit-scrollbar-thumb {
-                //         background-color: $green;
-                //         border-radius: 5px;
-                //     }
-                // }
                 .checkbox input:checked:after {
                     top: -18px;
                 }
@@ -307,6 +268,19 @@
                 }
             }
         }
+    }
+}
+@media (max-width: 1065px) {
+    .table__scroll {
+        width: 910px;
+    }
+}
+@media (max-width: 1000px) {
+    .container {
+        padding: 0 19px;
+    }
+    .table__scroll {
+        width: 890px;
     }
     .main__form .form-application {
         max-width: 335px;
@@ -814,20 +788,17 @@
         }
         label[for="realty"] {
             display: flex;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             width: 100px;
-            overflow: hidden;
         }
         .form-block {
-            max-width: 100px;
+            max-width: 125px;
             flex-direction: column;
             margin: 0;
             align-items: initial;
             height: 54px;
             .box,
             input {
-                max-width: 100px;
+                max-width: 125px;
                 font-size: 12px;
                 text-align: center;
                 padding: 0;
@@ -837,7 +808,7 @@
                 height: 32px;
                 background: url("../icons/calendar_min.svg") #f0f1f3 no-repeat right;
                 text-align: left;
-                padding-left: 6px;
+                padding-left: 12px;
             }
             &_min {
                 display: block;
@@ -855,7 +826,7 @@
         }
         .date {
             display: flex;
-            width: 220px;
+            width: 330px;
             justify-content: space-between;
         }
         .form-block + .form-block {
@@ -949,7 +920,7 @@
         }
         &_rent,
         &_right {
-            max-width: 260px;
+            max-width: 330px;
         }
         .width-input {
             max-width: 340px;
@@ -958,7 +929,7 @@
             }
         }
         .form-application .select__list {
-            max-width: 74px;
+            max-width: 99px;
             font-size: 12px;
         }
         .bg,
@@ -966,11 +937,11 @@
             height: 32px;
             .rent {
                 padding-left: 15px;
-                width: 85px;
+                width: 101px;
             }
         }
         .select__list {
-            max-width: 74px;
+            max-width: 99px;
             font-size: 11px;
             border-radius: 0 0 10px 10px;
         }
@@ -981,7 +952,7 @@
             padding: 7px 14px 0 12px;
             text-align: left;
             font-size: 12px;
-            width: 83px;
+            width: 108px;
             &::after {
                 content: url("../icons/arrow_min.svg");
                 right: 7px;
@@ -1016,7 +987,7 @@
         padding: 12px 10px;
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 379px) {
     .header button {
         width: 46px;
     }
@@ -1030,6 +1001,9 @@
         input {
             background-color: #fff;
         }
+        .date {
+            display: block;
+        }
         .form-block .calendar {
             background: url(../icons/calendar_min.svg) #fff no-repeat right;
         }
@@ -1041,6 +1015,9 @@
             .select__list_min {
                 background-color: #fff;
             }
+        }
+        .form-block:nth-child(2) {
+            margin-top: 20px;
         }
     }
     .main__form .select__list {

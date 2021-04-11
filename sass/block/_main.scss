@@ -17,11 +17,6 @@
             font-size: 18px;
             color: $dark;
             font-weight: 400;
-            div {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
         }
         p {
             font-size: 20px;
@@ -285,13 +280,10 @@
                 border-radius: 30px 0 0 30px;
                 height: 100%;
                 background-color: #f0f1f3;
-                // border-radius: 30px;
                 line-height: 18px;
                 color: rgba(66, 67, 72, 0.8);
                 cursor: pointer;
                 padding: 11px 5px 0 20px;
-                // padding-left: 20px;
-                // padding-top: 11px;
                 font-size: 16px;
                 white-space: nowrap;
                 overflow: hidden;
