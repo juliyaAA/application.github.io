@@ -2,6 +2,10 @@
     .form-address {
         padding-right: 10px;
     }
+    .table__scroll {
+        max-width: 1403px;
+        width: 100%;
+    }
 }
 @media (max-width: 1690px) {
     .main__form_client {
@@ -219,7 +223,6 @@
     }
     .table {
         &__scroll {
-            width: 970px;
             table {
                 td {
                     font-size: 13.5px;
@@ -268,11 +271,6 @@
                 }
             }
         }
-    }
-}
-@media (max-width: 1065px) {
-    .table__scroll {
-        width: 910px;
     }
 }
 @media (max-width: 1000px) {
