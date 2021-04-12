@@ -5,6 +5,9 @@
     .table__scroll {
         max-width: 1403px;
         width: 100%;
+        table td {
+            font-size: 14px;
+        }
     }
 }
 @media (max-width: 1690px) {
